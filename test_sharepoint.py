@@ -13,7 +13,7 @@ load_dotenv()
 url_shrpt = os.getenv("SHAREPOINT_URL")
 username_shrpt = os.getenv("SHAREPOINT_USER")
 password_shrpt = os.getenv("SHAREPOINT_PASSWORD")
-folder_url_shrpt = os.path.join(os.getenv("SHAREPOINT_FOLDER"))
+folder_url_shrpt = os.path.join(*os.getenv("SHAREPOINT_FOLDER").split('/'))
 
 print(folder_url_shrpt)
 #######################
